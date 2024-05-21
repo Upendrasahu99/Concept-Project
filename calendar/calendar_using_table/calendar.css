@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+tbody tr td{
+    position: relative;
+    z-index: 2;
+}
+tbody tr td span::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: rgb(113, 207, 113); */
+    height: 2.5rem;
+    width: 2.5rem;
+    z-index: -2;
+    border-radius: 50%;
+}
+tbody tr td span.inactive-day{
+    color: lightgray;
+}
+tbody tr td span.weekend::before{
+    background-color: rgb(178, 175, 175);
+}
+tbody tr td span.today{
+    color : red
+}
